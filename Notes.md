@@ -53,3 +53,4 @@
   - Event timestamp should be different from its created_at and updated_at for some reason
   - Neither Organizations nor Events can be updated or edited
   - Error handling is not needed for this application
+  - There is no business need to show a single Event resource

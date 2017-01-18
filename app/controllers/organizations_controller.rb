@@ -12,6 +12,11 @@ class OrganizationsController < ApplicationController
     render json: @organizations.to_json
   end
 
+  def show
+    @organization = Organization.find_by_name(params[:id]).destroy
+    render json: @organization.to_json
+  end
+
   def destroy
     Organization.find_by_name(params[:id]).destroy
     render json: @organizations.to_json
