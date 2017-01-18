@@ -32,9 +32,9 @@ class OrganizationsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'show a single event' do
-    organization = Organization.first.name
+    organization = Organization.first
 
-    get organization_url(id: Organization.first.name)
+    get organization_url(id: organization.name)
 
     assert_response :success
     assert_equal organization, assigns(:organization)
