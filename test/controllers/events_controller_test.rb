@@ -25,4 +25,13 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
     assert_equal Event.all, assigns(:events)
   end
 
+  test "show all events for an organization" do
+    organization = Organization.first
+
+    get organization_events_url(organization_id: organization.name)
+    assert_response :success
+
+    assert_equal organization.events, assigns(:events)
+  end
+
 end

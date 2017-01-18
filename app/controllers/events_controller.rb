@@ -6,6 +6,13 @@ class EventsController < ApplicationController
     render json: @events.to_json
   end
 
+  def index
+    organization = Organization.find_by_name(params[:organization_id])
+    @events = organization.events
+
+    render json: @events.to_json
+  end
+
   def create
     organization = Organization.find_by_name(params[:organization_id])
 
