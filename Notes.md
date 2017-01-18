@@ -50,3 +50,4 @@
   - Rails 4+ includes Rails 5
   - Events alsways belong to Organizations
   - Event timestamp should be different from its created_at and updated_at for some reason
+  - Neither Organizations nor Events can be updated or edited
