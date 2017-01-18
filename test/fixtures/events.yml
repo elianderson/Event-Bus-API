@@ -27,11 +27,11 @@ four:
 five:
   organization_id: 1
   message: 'Nerd Life'
-  hostname: 'www.messagesender.com'
+  hostname: 'www.livingthedream.com'
   timestamp: 2017-01-17 19:17:18
 
 six:
   organization_id: 2
   message: 'All your base are belong to us'
-  hostname: 'www.anothermessagesender.com'
+  hostname: 'www.possiblethreat.com'
   timestamp: 2017-01-17 19:17:18
