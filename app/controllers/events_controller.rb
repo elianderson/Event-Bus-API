@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
 
-  def index
+  def index_all
     @events = Event.all
 
     render json: @events.to_json
