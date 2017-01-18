@@ -26,8 +26,18 @@ class OrganizationsControllerTest < ActionDispatch::IntegrationTest
 
     delete organization_url(id: Organization.first.name)
 
+    assert_response :success
     assert_equal original_org_count - 1, Organization.count
 
+  end
+
+  test 'show a single event' do
+    organization = Organization.first.name
+
+    get organization_url(id: Organization.first.name)
+
+    assert_response :success
+    assert_equal organization, assigns(:organization)
   end
 
 end
