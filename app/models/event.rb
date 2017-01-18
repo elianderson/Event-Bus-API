@@ -4,4 +4,6 @@ class Event < ApplicationRecord
   default_scope { order('id desc') }
 
   belongs_to :organization
+
+  scope :by_hostname, -> (hostname) { where(hostname: hostname) if hostname }
 end

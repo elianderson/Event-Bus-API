@@ -36,12 +36,25 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
 
   test "show all events for an organization with a limit" do
     organization = Organization.first
+    limit = 2
 
-    get organization_events_url(organization_id: organization.name, limit: 2)
+    get organization_events_url(organization_id: organization.name, limit: limit)
     assert_response :success
 
-    assert organization.events.count > 2
-    assert_equal 2, assigns(:events).count
+    assert organization.events.count > limit
+    assert_equal limit, assigns(:events).count
+  end
+
+  test "show all events for an organization with a limit and hostname specified" do
+    organization = Organization.first
+    hostname = 'www.anothermessagesender.com'
+    limit = 3
+
+    get organization_events_url(organization_id: organization.name, limit: limit, hostname: hostname)
+    assert_response :success
+
+    assert limit > assigns(:events).count
+    assert organization.events.where(hostname: hostname).count, assigns(:events).count
   end
 
 end

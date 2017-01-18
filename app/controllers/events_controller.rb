@@ -8,7 +8,7 @@ class EventsController < ApplicationController
 
   def index
     organization = Organization.find_by_name(params[:organization_id])
-    @events = organization.events.limit(params[:limit])
+    @events = organization.events.by_hostname(params[:hostname]).limit(params[:limit])
 
     render json: @events.to_json
   end
