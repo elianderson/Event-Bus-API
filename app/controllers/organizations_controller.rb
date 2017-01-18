@@ -13,7 +13,7 @@ class OrganizationsController < ApplicationController
   end
 
   def destroy
-    organization.find_by_name(params[:id]).destroy
+    Organization.find_by_name(params[:id]).destroy
     render json: @organizations.to_json
   end
 
