@@ -25,7 +25,7 @@
   - `rake db:migrate`
 
 * Database initialization
-  - To see example date run `rake db:fixtures:load`
+  - To see example data run `rake db:fixtures:load`
 
 * Run the Application
  - Run `rails s` and your server will be running at http://localhost:3000
