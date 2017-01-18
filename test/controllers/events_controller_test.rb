@@ -17,4 +17,12 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
     assert_equal original_event_count + 1, Event.count
   end
 
+  # test "show all events" do
+  #   get events_url
+  #
+  #   assert_response :success
+  #   assert_not_nil assigns(:events)
+  #   assert_equal Event.all, assigns(:events)
+  # end
+
 end

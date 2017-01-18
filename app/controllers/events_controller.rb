@@ -1,9 +1,15 @@
 class EventsController < ApplicationController
 
+  def index
+    events = Event.all
+
+    render json: events.to_json
+  end
+
   def create
     organization = Organization.find_by_name(params[:organization_id])
 
-    Event.create(event_params)
+    Event.create(event_params.merge({organization_id: organization.id}))
 
     render json: organization.events.to_json
 
@@ -11,7 +17,7 @@ class EventsController < ApplicationController
 
   private
 
-  def events_params
+  def event_params
     params.require(:event).permit(:message, :hostname, :timestamp)
   end
 end

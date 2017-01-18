@@ -4,4 +4,6 @@ Rails.application.routes.draw do
     resources :events, except: [:update, :edit, :show]
   end
 
+  resources :events, only: [:index]
+
 end
