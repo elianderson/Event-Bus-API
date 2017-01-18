@@ -13,6 +13,7 @@
   - Must Create and Read Events
   - Endpoints are directed to Organizations
   - Must not expose any pages
+  - All end points should show the newest elements first
 
 ##Data Structure:
 ###Organizations:

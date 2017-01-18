@@ -8,4 +8,9 @@ class OrganizationTest < ActiveSupport::TestCase
     assert_not_nil organization.errors[:name], 'no validation for name present'
   end
 
+  test 'should list the newest first' do
+    organization = Organization.create(name: "My New Organization")
+
+    assert_equal organization, Organization.first
+  end
 end
