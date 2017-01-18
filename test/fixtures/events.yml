@@ -11,3 +11,27 @@ two:
   message: 'Why, hello there'
   hostname: 'www.anothermessagesender.com'
   timestamp: 2017-01-17 19:17:18
+
+three:
+  organization_id: 1
+  message: 'What is the meaning of live an all things?'
+  hostname: 'www.messagesender.com'
+  timestamp: 2017-01-17 19:17:18
+
+four:
+  organization_id: 2
+  message: 'Fourty Two'
+  hostname: 'www.anothermessagesender.com'
+  timestamp: 2017-01-17 19:17:18
+
+five:
+  organization_id: 1
+  message: 'Nerd Life'
+  hostname: 'www.messagesender.com'
+  timestamp: 2017-01-17 19:17:18
+
+six:
+  organization_id: 2
+  message: 'All your base are belong to us'
+  hostname: 'www.anothermessagesender.com'
+  timestamp: 2017-01-17 19:17:18
