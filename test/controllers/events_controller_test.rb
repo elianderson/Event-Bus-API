@@ -34,4 +34,14 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
     assert_equal organization.events, assigns(:events)
   end
 
+  test "show all events for an organization with a limit" do
+    organization = Organization.first
+
+    get organization_events_url(organization_id: organization.name, limit: 2)
+    assert_response :success
+
+    assert organization.events.count > 2
+    assert_equal 2, assigns(:events).count
+  end
+
 end
