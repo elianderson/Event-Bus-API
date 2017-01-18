@@ -20,4 +20,14 @@ class OrganizationsControllerTest < ActionDispatch::IntegrationTest
     assert_equal original_org_count + 1, Organization.count
   end
 
+  # test 'should be able to be destroyed' do
+  #
+  #   original_org_count = Organization.count
+  #
+  #   delete organization_url(id: Organization.first.name)
+  #
+  #   assert_equal original_org_count - 1, Organization.count
+  #
+  # end
+
 end
